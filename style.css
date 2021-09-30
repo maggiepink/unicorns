@@ -99,6 +99,9 @@ button.cta{
 	padding: 20px 30px;
 	border-radius: 10px;
 	text-decoration: none;
+	outline: none;
+	border: none;
+	cursor: pointer;
 }
 
 a.cta.alt,
@@ -107,12 +110,18 @@ button.cta.alt{
 	box-shadow: 0 0 0 10px rgba(0,0,0,.15);
 }
 
+a.cta:active,
+button.cta:active{
+	opacity: .7;
+}
+
 nav{
 	height: 100px;
 	background-color: white;
 	box-shadow: 0 5px 8px rgba(0,0,0,.2);
 	position: sticky;
 	top: 0;
+	z-index: 1;
 }
 
 nav .logo{
@@ -167,21 +176,116 @@ nav ul li a{
 }
 
 .highlight{
-	background-color: #FFADF9;
-	color: #FF3300;
+	background-color: pink;
+	color: darkorchid;
 	padding: 5px 10px;
 	line-height: 50px;
 	display: inline;
+	font-weight: bold;
+}
+
+.sep{
+	width: 470px;
+	height: 10px;
+	background-color: mediumpurple;
+	margin: 70px auto;
+
+}
+
+.story h3{
+	font-size: 40px;
 	font-weight: 800;
 }
 
+.nb-list{
+	width: 470px;
+	padding: 20px 20px 0 20px;
+	box-sizing: border-box;
+	background-color: #EDEDED;
+	float: left;
+	margin: 0 20px 20px 0;
+	position: relative;
+}
+
+.nb-list li{
+	height: 70px;
+	border-radius: 10px;
+	font-size: 40px;
+	color: white;
+	font-weight: bold;
+	display: block;
+	margin-bottom: 20px;
+	padding: 6px 20px;
+	box-sizing: border-box;
+}
+.nb-list li.deepskyblue{background-color: deepskyblue;}
+.nb-list li.gray{background-color: rgba(0,0,0, .1);}
+.nb-list li.pink{background-color: pink;}
+.nb-list li.mediumpurple{background-color: mediumpurple;}
+
+.nb-list li.dragging{
+	position: absolute;
+	top: 101px;
+	left: 63px;
+	right: -15px;
+	transform: rotate(6deg);
+	box-shadow: 0 2px 14px rgba(0,0,0,.3);
+}
+
+.nb-list li.dragging:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	background: url(https://i.imgur.com/9g1HFDh.png) no-repeat 0 0;
+	background-size: 100%;
+	bottom: 0;
+	left: 60%;
+}
+.uni-img{
+	display: block;
+	margin: 0 auto;
+}
+
+footer{
+	text-align: center;
+	color: rgba(0,0,0, .4);
+	font-size: 20px;
+	margin: 85px 0 45px;
+	font-weight: bold;
+}
+
+footer a{
+	color: rgba(0,0,0, .4);
+}
+
+.popup{
+	display: none;
+}
+
+
+
 /*
 
-<div class="more-info" id="more-info">
-		<h2>Join the Unicorn Fan Club!</h2>
-		<p> Every week we have <span class="highlight">a party.</span> If you want to 
-		join us then join our fan club. Members will also receive <span class="highlight">glitter and cupcakes.</span> Super fun!
-		<button class="cta">Sign Me Up!</button>
+<div class="sep"></div>
+	<div class="story" id="story">
+		<ul class="nb-list">
+			<li class="deepskyblue">Love</li>
+			<li class="gray">&nbsp;</li>
+			<li class="pink dragging">Magic</li>
+			<li class="mediumpurple">Friendship</li>
+			<li class="deepskyblue">Fun</li>
+			<li class="pink">Adventures</li>
+			<li class="mediumpurple">Sparkles</li>
+			<li class="deepskyblue">Cupcakes</li>
+		</ul>
+		<h3>Left: Things We Find Important<br/>
+		Below: Our Story</h3>
+		<p>Once upon a time, these magical creatures roamed the lands. They were always helping others with their unicorn magic.</p>
+		<p>Until one day the unicorns were hunted by evil greedy people so they could have their magic all to themselves.</p>
+		<p>Some believe the unicorns are still out there. Secretly making the world a more magical place. Some say they will reveal themselves to those with a pure heart and grant them wishes!</p>
 	</div>
+	<div class="sep"></div>
 
 */
